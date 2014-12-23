@@ -31,7 +31,7 @@
 credentials = {}
 
 
-if node[:sumologic][:credentials]
+if node[:sumologic][:use_credentials]
   creds = node[:sumologic][:credentials]
 
   if creds[:secret_file]

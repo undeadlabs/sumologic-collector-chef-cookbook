@@ -28,7 +28,7 @@
 # 6. Start collector
 #
 # Requires /etc/sumo.conf file for automated activation
-j
+
 include_recipe 'java'
 include_recipe 'sumologic-collector::sumoconf'
 include_recipe 'sumologic-collector::sumojson'
