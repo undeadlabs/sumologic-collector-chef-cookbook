@@ -26,13 +26,8 @@
 # https://service.sumologic.com/ui/help/Default.htm#JSON_Source_Configuration.htm
 #
 
-if File.exists? node['sumologic']['installDir']
-    Chef::Log.info "Sumo Logic Collector found."
-    # TODO recipe update
-else
-    Chef::Log.info "Installing Sumo Logic Collector..."
-    include_recipe 'sumologic-collector::sumoconf'
-    include_recipe 'sumologic-collector::sumojson'
-    include_recipe 'sumologic-collector::install'
-    include_recipe 'sumologic-collector::cleanup'
-end
+Chef::Log.info "Installing Sumo Logic Collector..."
+include_recipe 'sumologic-collector::sumoconf'
+include_recipe 'sumologic-collector::sumojson'
+include_recipe 'sumologic-collector::install'
+include_recipe 'sumologic-collector::cleanup'
